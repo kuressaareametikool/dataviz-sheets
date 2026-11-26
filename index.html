@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Class activity</title>
+    <link rel="stylesheet" href="./server/style.css">
+  </head>
+  <body>
+    <h1>Class activity</h1>
+    <a href="/api/data">View full JSON</a>
+    <h2>Daily steps</h2>
+    <canvas id="steps" aria-label="Daily steps" role="img"></canvas>
+    <h2>Daily total screen time</h2>
+    <canvas id="minutes" aria-label="Daily total screen time in minutes" role="img"></canvas>
+    <h2>Steps by participant</h2>
+    <p>Click a participant’s name in a chart legend to hide or show their line.</p>
+    <canvas id="all-steps" aria-label="Daily steps by participant" role="img"></canvas>
+    <h2>Screen time by participant</h2>
+    <canvas id="all-minutes" aria-label="Daily total screen time in minutes by participant" role="img"></canvas>
+    <h2>Total class steps per day</h2>
+    <canvas id="total" aria-label="Total class steps by date" role="img"></canvas>
+    <h2>Mean steps per participant per day</h2>
+    <p>The mean includes only participants who reported a numeric step count that day, including zero.</p>
+    <canvas id="mean" aria-label="Mean steps per participant by date" role="img"></canvas>
+    <h2>Median steps per participant per day</h2>
+    <canvas id="median" aria-label="Median steps per participant by date" role="img"></canvas>
+    <h2>How complete are our activity records?</h2>
+    <p>Missing readings affect how much of the class our comparisons represent.</p>
+    <p id="coverage-summary" role="status">Loading workbook records…</p>
+    <h2>Available readings by measurement</h2>
+    <canvas id="coverage-overall" aria-label="Percentage of available step and screen-time readings" role="img"></canvas>
+    <h2>Participants reporting each day</h2>
+    <canvas id="coverage-daily" aria-label="Daily percentage of participants reporting steps and screen time" role="img"></canvas>
+    <p id="coverage-finding"></p>
+    <p>Recorded zeros count as readings. Blank or text values do not. All dates in the workbook period are included, even empty or future dates. Missing readings do not mean zero activity.</p>
+    <p id="error" role="alert"></p>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
